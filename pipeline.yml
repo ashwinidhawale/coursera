@@ -1,0 +1,15 @@
+---
+resources:
+- name: coursera
+  type: git
+  source:
+    uri: https://github.com/ashwinidhawale/coursera
+    branch: main
+
+jobs:
+- name: unit
+  plan:
+  - get: coursera
+    trigger: true
+  - task: unit
+    file: coursera/cf/manifest-dev.yml

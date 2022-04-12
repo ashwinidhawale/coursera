@@ -1,0 +1,8 @@
+applications:
+- name: coursera
+  memory: 1G
+  instances: 1
+  routes:
+    - route: coursera-dev.springernature.app
+  services:
+    - rev-logging
